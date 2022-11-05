@@ -8,6 +8,9 @@
     "lint": "eslint src --ext .ts",
     "fix": "eslint src --ext .ts --fix"
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
