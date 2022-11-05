@@ -38,9 +38,9 @@ model Participant {
 }
 
 model Game {
-  id    String   @id @default(cuid())
-  date  DateTime
-  Guess Guess[]
+  id      String   @id @default(cuid())
+  date    DateTime
+  guesses Guess[]
 }
 
 model Guess {
