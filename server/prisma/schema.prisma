@@ -19,6 +19,8 @@ model Pool {
   title     String
   code      String   @unique
   createdAt DateTime @default(now())
+
+  participants Participant[]
 }
 
 model User {
@@ -29,15 +31,17 @@ model User {
   avatarUrl String?
   createdAt DateTime @default(now())
 
-  participant Participant[]
+  participants Participant[]
 }
 
 model Participant {
   id     String @id @default(cuid())
   userId String
+  poolId String
 
   guesses Guess[]
-  User    User    @relation(fields: [userId], references: [id])
+  user    User    @relation(fields: [userId], references: [id])
+  pool    Pool    @relation(fields: [poolId], references: [id])
 }
 
 model Game {
