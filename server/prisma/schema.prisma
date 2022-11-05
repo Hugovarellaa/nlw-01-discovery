@@ -42,5 +42,8 @@ model Game {
 }
 
 model Guess {
-  id String @id @default(cuid())
+  id               String   @id @default(cuid())
+  firstTeamPoints  Int
+  secondTeamPoints Int
+  createdAt        DateTime @default(now())
 }
