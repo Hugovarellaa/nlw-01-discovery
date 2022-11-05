@@ -4,7 +4,7 @@ generator client {
 
 generator erd {
   provider = "prisma-erd-generator"
-  output   = "../prisma-diagrama/ERD.svg"
+  output   = "../prisma-erd/ERD.svg"
   theme    = "default"
 }
 
