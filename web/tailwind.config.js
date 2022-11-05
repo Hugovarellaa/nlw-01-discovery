@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      backgroundImage: {
+        app: 'url(/background.png)',
+      },
       colors: {
         yellow: {
           500: '#f7dd43',
