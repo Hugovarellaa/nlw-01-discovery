@@ -28,18 +28,21 @@ model User {
   email     String   @unique
   avatarUrl String?
   createdAt DateTime @default(now())
+
+  participant Participant[]
 }
 
 model Participant {
-  id String @id @default(cuid())
+  id     String @id @default(cuid())
+  userId String
 
   guesses Guess[]
+  User    User    @relation(fields: [userId], references: [id])
 }
 
 model Game {
-  id   String   @id @default(cuid())
-  date DateTime
-
+  id                    String   @id @default(cuid())
+  date                  DateTime
   firstTeamCountryCode  String
   secondTeamCountryCode String
 
