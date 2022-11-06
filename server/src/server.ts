@@ -1,4 +1,5 @@
 import cors from '@fastify/cors'
+import jwt from '@fastify/jwt'
 import Fastify from 'fastify'
 
 import { authRoutes } from './routes/auth'
@@ -14,6 +15,11 @@ async function bootstrap() {
 
   fastify.register(cors, {
     origin: true,
+  })
+
+  //  Em produção isso precisa ser uma variável de ambiente
+  await fastify.register(jwt, {
+    secret: 'nlwcopa',
   })
 
   await fastify.register(poolRoutes)
