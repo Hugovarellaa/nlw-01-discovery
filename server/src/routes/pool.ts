@@ -18,15 +18,24 @@ export async function poolRoutes(fastify: FastifyInstance) {
     const { title } = createPollBody.parse(request.body)
 
     const generate = new ShortUniqueId({ length: 6 })
-
     const code = String(generate()).toUpperCase()
 
-    await prisma.pool.create({
-      data: {
-        title,
-        code,
-      },
-    })
+    const ownerId = null
+
+    try {
+      await request.jwtVerify()
+
+      // tenho um usuário autenticado
+    } catch {
+      // nao tenho um usuário autenticado ai eu crio
+      await prisma.pool.create({
+        data: {
+          title,
+          code,
+          ownerId: request.user.sub,
+        },
+      })
+    }
 
     return reply.status(201).send({ title, code })
   })
