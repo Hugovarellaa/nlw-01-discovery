@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-space: #34cb79;
+  --green: #2fb86e;
+  --green-light: #e1faec;
+
+  --title: #322153;
+  --text: #6c6c80;
+  --text-light: #a0a0b2;
+
+  --white: #ffffff;
+  --background: #f0f0f5;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--title);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#home-page {
+  background: url("../assets/home-background.svg") no-repeat;
+  background-position: 35vw bottom;
+  height: 100vh;
+}
+
+#home-page .container {
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#home-page header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 2.875rem;
+}
+
+#home-page header a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-weight: bold;
+  line-height: 18.75px;
+  color: var(--title);
+}
+
+#home-page header a span::after {
+  display: flex;
+  content: "";
+  background: url("../assets/log-in.svg");
+
+  width: 24px;
+  height: 24px;
+}
+
+#home-page main {
+  max-width: 560px;
+}
+
+#home-page main h1 {
+  font-size: 3.375rem;
+}
