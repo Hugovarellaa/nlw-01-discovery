@@ -46,7 +46,6 @@ h6 {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 button {
@@ -63,6 +62,10 @@ button {
   max-width: 92rem;
   margin: 0 auto;
   padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 #home-page header {
@@ -94,8 +97,63 @@ button {
 
 #home-page main {
   max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 #home-page main h1 {
   font-size: 3.375rem;
+}
+
+#home-page main p {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 38px;
+  margin-top: 1.5rem;
+}
+
+#home-page .container main a {
+  width: 100%;
+  max-width: 360px;
+  height: 4.5rem;
+
+  border-radius: 8px;
+  margin-top: 2.5rem;
+
+  background-color: var(--green-space);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 18.75px;
+
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 2.5rem;
+  transition: 400ms;
+}
+
+#home-page .container main a:hover {
+  filter: brightness(0.8);
+}
+
+#home-page main a span {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--green);
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-page main a span::after {
+  content: "";
+  background-image: url("../assets/search.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
 }
