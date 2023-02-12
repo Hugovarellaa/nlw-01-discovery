@@ -54,7 +54,7 @@ button {
 
 #home-page {
   background: url("../assets/home-background.svg") no-repeat;
-  background-position: 35vw bottom;
+  background-position: 50vw bottom;
   height: 100vh;
 }
 
@@ -157,9 +157,9 @@ button {
   height: 24px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1220px) {
   #home-page {
-    background-position: 25vw bottom;
+    background-position: 30vw bottom;
   }
 }
 
