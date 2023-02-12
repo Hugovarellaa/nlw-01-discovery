@@ -101,6 +101,7 @@ form button[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
 }
 
 form button[type="submit"]:hover {
