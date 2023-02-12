@@ -1,20 +1,58 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-#home-page .container {
-  width: 100%;
-  max-width: 92rem;
-  margin: 0 auto;
-  padding: 0 1rem;
+:root {
+  --green-space: #34cb79;
+  --green: #2fb86e;
+  --green-light: #e1faec;
+
+  --title: #322153;
+  --text: #6c6c80;
+  --text-light: #a0a0b2;
+
+  --white: #ffffff;
+  --background: #f0f0f5;
 }
 
-#home-page header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
 
-  margin-top: 2.5rem;
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--title);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
