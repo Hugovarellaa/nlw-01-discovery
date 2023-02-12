@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home-page .container {
+  width: 100%;
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#home-page header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 2.5rem;
+}
