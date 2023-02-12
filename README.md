@@ -1,3 +1,0 @@
-# Extensões
-
-- Launchbase Theme
