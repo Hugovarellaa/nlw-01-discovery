@@ -12,6 +12,10 @@
   max-width: 92rem;
   margin: 0 auto;
   padding: 0 1rem;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #home-page header {
@@ -38,4 +42,73 @@
   background-image: url("../assets/log-in.svg");
   width: 24px;
   height: 24px;
+}
+
+#home-page main {
+  max-width: 560px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+#home-page main h1 {
+  margin-top: 60px;
+  font-size: 3.375rem;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+#home-page main p {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+#home-page main a {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 348px;
+  background-color: var(--green-space);
+  height: 4.5rem;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#home-page main a:hover {
+  filter: brightness(0.9);
+}
+
+#home-page main a span {
+  background-color: var(--green);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 8px 0 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-page main a span::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/search.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+#home-page main a strong {
+  font-size: 1rem;
+  line-height: 18.75px;
+  color: var(--white);
 }
