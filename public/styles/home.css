@@ -1,0 +1,41 @@
+/* 1440 image distorce 35vw */
+
+#home-page {
+  height: 100vh;
+  background-image: url("../assets/home-background.svg");
+  background-repeat: no-repeat;
+  background-position: 50vw bottom;
+}
+
+#home-page .container {
+  width: 100%;
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#home-page header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 2.5rem;
+}
+
+#home-page header a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--title);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 18.75px;
+}
+
+#home-page header a span {
+  display: flex;
+  background-image: url("../assets/log-in.svg");
+  width: 24px;
+  height: 24px;
+}
