@@ -1,0 +1,83 @@
+#modal {
+  width: 100vw;
+  height: 100vh;
+  background: var(--overlay-modal);
+  opacity: 0.95;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 400ms;
+}
+
+#modal .container {
+  color: var(--white);
+  width: 420px;
+}
+
+#modal header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+#modal header a {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/x.svg");
+  background-repeat: no-repeat;
+
+  font-size: 0.01px;
+}
+
+#modal header h1 {
+  color: var(--white);
+  font: 2.25rem;
+  line-height: 42px;
+}
+
+#modal form label {
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#modal form .field {
+  display: flex;
+}
+
+#modal form input {
+  flex: 1;
+
+  background-color: var(--background);
+  border: 0;
+  border-radius: 8px 0 0 8px;
+  padding: 1rem 1.5rem;
+
+  font-size: 1rem;
+  color: var(--text);
+}
+
+#modal form button {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+
+  background-color: var(--green-space);
+  color: var(--white);
+}
+
+#modal form button:hover {
+  background-color: var(--green);
+}
