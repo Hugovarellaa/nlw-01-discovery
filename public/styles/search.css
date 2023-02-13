@@ -1,0 +1,86 @@
+body::after {
+  content: "";
+  position: fixed;
+  top: 311px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: var(--white);
+}
+
+#page-search {
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#page-search header {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page-search header a {
+  color: var(--title);
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#page-search header a span {
+  display: flex;
+  background-image: url("../assets/arrow-left.svg");
+  width: 24px;
+  height: 24px;
+}
+
+main {
+  margin: 2.5rem 0;
+}
+
+main h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+main .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+main img {
+  border-radius: 8px 8px 0 0;
+}
+
+main .card h2 {
+  margin-top: 2rem;
+  font-size: 2.25rem;
+  line-height: 41px;
+  color: var(--title);
+}
+
+main .card h3 {
+  max-width: 245px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 34px;
+  color: var(--green-space);
+
+  margin: 1.5rem 0;
+}
+
+main .card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 26px;
+  color: var(--text);
+}
