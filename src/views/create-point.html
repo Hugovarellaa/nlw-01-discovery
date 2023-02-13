@@ -1,42 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+{% extends "layout.html" %}
 
-    <!-- Font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- ViewPort -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Icon favicon -->
-    <link
-      rel="shortcut icon"
-      href="./assets/favicon.png"
-      type="image/favicon"
-    />
+<!-- Variável CSS -->
+{% set pageId = "page-create-point" %}
 
     <!-- Styles Sheet CSS -->
-    <link rel="stylesheet" href="./public/styles/main.css" />
-    <link rel="stylesheet" href="./public/styles/create-point.css" />
-    <link rel="stylesheet" href="./public/styles/responsive.css" />
+{% block styles %}
+  <link rel="stylesheet" href="./public/styles/create-point.css" />
+{% endblock styles %}
 
-    <title>Ecoleta - Create Point</title>
-  </head>
-  <body>
-    <div id="page-create-point">
-      {% include "partials/header.html" %}
+<!-- Title page -->
+{% block title %}
+  <title>Ecoleta - Create Point</title>
+  {% endblock title %}
 
-      <form action="/search.htm">
-        <h1>Cadastro do ponto de coleta</h1>
+<!-- Content page -->
+{% block content %}
+  {% include "partials/header.html" %}
 
-        <fieldset>
+   <form action="/search.htm">
+      <h1>Cadastro do ponto de coleta</h1>
+
+      <fieldset>
           <legend>
             <h2>Dados da entidade</h2>
           </legend>
@@ -72,9 +56,9 @@
               </select>
             </div>
           </div>
-        </fieldset>
+      </fieldset>
 
-        <fieldset>
+      <fieldset>
           <legend>
             <h2>Ítens de coleta</h2>
           </legend>
@@ -115,12 +99,15 @@
             </li>
           </div>
           <input type="hidden" name="itens" />
-        </fieldset>
+      </fieldset>
 
-        <button type="submit">Cadastrar ponto de coleta</button>
-      </form>
-    </div>
+      <button type="submit">Cadastrar ponto de coleta</button>
+    </form>
+{% endblock content %}
 
-    <script src="./public/scripts/create-point.js"></script>
+<!-- Script -->
+{% block scripts %}
+<script src="./public/scripts/create-point.js"></script>
+{% endblock scripts %}
   </body>
 </html>
