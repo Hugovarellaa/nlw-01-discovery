@@ -17,6 +17,10 @@
   transition: 400ms;
 }
 
+#modal.hidden {
+  display: none;
+}
+
 #modal .container {
   color: var(--white);
   width: 420px;
