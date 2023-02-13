@@ -1,4 +1,4 @@
-// Logica Input das cidades e estado
+// Logic Input states and city
 function populateUFs() {
   const ufSelect = document.querySelector("select[name=uf]");
 
@@ -44,10 +44,21 @@ for (const item of itensToCollect) {
   item.addEventListener("click", handleSelectedItem);
 }
 
+let selectedItems = [];
+
 function handleSelectedItem(event) {
   //add or remove class selected with javascript
   const itemLi = event.target;
   itemLi.classList.toggle("selected");
 
   const itemId = event.target.dataset.id;
+  const alreadySelected = selectedItems.findIndex((item) => item == itemId);
+
+  if (alreadySelected >= 0) {
+    const filteredItems = selectedItems.filter((item) => item != itemId);
+    selectedItems = filteredItems;
+  } else {
+    selectedItems.push(itemId);
+  }
+  console.log(selectedItems);
 }
