@@ -44,6 +44,7 @@ for (const item of itensToCollect) {
   item.addEventListener("click", handleSelectedItem);
 }
 
+const collectedItens = document.querySelector("input[name=itens]");
 let selectedItems = [];
 
 function handleSelectedItem(event) {
@@ -60,5 +61,5 @@ function handleSelectedItem(event) {
   } else {
     selectedItems.push(itemId);
   }
-  console.log(selectedItems);
+  collectedItens.value = selectedItems;
 }
