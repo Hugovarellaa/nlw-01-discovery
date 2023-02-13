@@ -25,6 +25,7 @@
     <!-- Styles Sheet CSS -->
     <link rel="stylesheet" href="./public/styles/main.css" />
     <link rel="stylesheet" href="./public/styles/home.css" />
+    <link rel="stylesheet" href="./public/styles/modal.css" />
     <link rel="stylesheet" href="./public/styles/responsive.css" />
 
     <title>Ecoleta - Home</title>
@@ -46,10 +47,28 @@
           </p>
           <a href="#">
             <span></span>
-            <strong>
-              Pesquisar pontos de coleta</a>
-            </strong>
+            <strong> Pesquisar pontos de coleta </strong>
+          </a>
         </main>
+      </div>
+    </div>
+
+    <div id="modal">
+      <div class="conatiner">
+        <div class="header">
+          <h1>Pontos de coleta</h1>
+          <a href="">Fechar</a>
+        </div>
+
+        <form action="">
+          <label for="search">Cidade ou estado</label>
+          <div class="search field">
+            <input type="text" name="search" id="search" />
+            <button>
+              <img src="./public/assets/search.svg" alt="Buscar" />
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </body>
