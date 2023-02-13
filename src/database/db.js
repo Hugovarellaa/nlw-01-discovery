@@ -6,18 +6,18 @@ module.exports = db;
 
 // db.serialize(() => {
 //   // Create db
-//   db.run(`
-//       CREATE TABLE IF NOT EXISTS places (
-//         id INTEGER PRIMARY KEY AUTOINCREMENT,
-//         name TEXT NOT NULL,
-//         image TEXT NOT NULL,
-//         address TEXT NOT NULL,
-//         address2 TEXT NOT NULL,
-//         state TEXT NOT NULL,
-//         city TEXT NOT NULL,
-//         items TEXT NOT NULL
-//       );
-//     `);
+//   // db.run(`
+//   //     CREATE TABLE IF NOT EXISTS places (
+//   //       id INTEGER PRIMARY KEY AUTOINCREMENT,
+//   //       name TEXT NOT NULL,
+//   //       image TEXT NOT NULL,
+//   //       address TEXT NOT NULL,
+//   //       address2 TEXT NOT NULL,
+//   //       state TEXT NOT NULL,
+//   //       city TEXT NOT NULL,
+//   //       items TEXT NOT NULL
+//   //     );
+//   //   `);
 
 //   const query = `
 //     INSERT INTO places (
@@ -49,20 +49,20 @@ module.exports = db;
 //   // db.run(query, values, callback);
 
 //   // Get db
-//   db.all(
-//     `
-//     SELECT * FROM places
-//   `,
-//     function (err, results) {
-//       if (err) {
-//         return console.log(err);
-//       }
-//       console.log("Aqui estão os registros :", results);
-//     }
-//   );
+//   // db.all(
+//   //   `
+//   //   SELECT * FROM places
+//   // `,
+//   //   function (err, results) {
+//   //     if (err) {
+//   //       return console.log(err);
+//   //     }
+//   //     console.log("Aqui estão os registros :", results);
+//   //   }
+//   // );
 
 //   // Delete registro em db
-//   // db.run(`DELETE FROM places WHERE id = ?`, [1], function (err, results) {
+//   // db.run(`DELETE FROM places WHERE id = ?`, [3], function (err, results) {
 //   //   if (err) {
 //   //     return console.log(err);
 //   //   }

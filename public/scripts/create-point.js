@@ -53,6 +53,7 @@ function handleSelectedItem(event) {
   itemLi.classList.toggle("selected");
 
   const itemId = event.target.dataset.id;
+
   const alreadySelected = selectedItems.findIndex((item) => item == itemId);
 
   if (alreadySelected >= 0) {
@@ -61,5 +62,6 @@ function handleSelectedItem(event) {
   } else {
     selectedItems.push(itemId);
   }
+
   collectedItens.value = selectedItems;
 }
