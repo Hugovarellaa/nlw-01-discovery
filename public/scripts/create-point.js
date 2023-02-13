@@ -1,3 +1,4 @@
+// Logica Input das cidades e estado
 function populateUFs() {
   const ufSelect = document.querySelector("select[name=uf]");
 
