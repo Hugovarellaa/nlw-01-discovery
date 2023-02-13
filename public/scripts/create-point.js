@@ -36,3 +36,14 @@ function getCities(event) {
 }
 
 document.querySelector("select[name=uf]").addEventListener("change", getCities);
+
+// Itens de coletas
+const itensToCollect = document.querySelectorAll(".itens-grid li");
+
+for (const item of itensToCollect) {
+  item.addEventListener("click", handleSelectedItem);
+}
+
+function handleSelectedItem(event) {
+  console.log(event.target);
+}
