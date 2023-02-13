@@ -1,5 +1,6 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
+const db = require("./database/db");
 
 const app = express();
 
@@ -19,7 +20,18 @@ app.get("/create", (req, res) => {
 });
 
 app.get("/search", (req, res) => {
-  res.render("search.htm");
+  db.all(
+    `
+     SELECT * FROM places
+   `,
+    function (err, results) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("Aqui estão os registros :", results);
+      return res.render("search.htm", { places: results });
+    }
+  );
 });
 
 app.listen(3333, console.log("Server listening on port 3333"));

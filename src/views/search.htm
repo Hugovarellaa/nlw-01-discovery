@@ -22,27 +22,20 @@
   </h3>
 
   <div class="cards">
+    {% for place in places %}
     <div class="card">
-      <img src="./public/assets/colectoria.png" alt="Colectoria" />
-      <h2>Colectoria</h2>
-      <h3>Resíduos Eletrônicos, Lâmpadas</h3>
+      <img src="{{place.image}}" alt="{{place.name}}" />
+      <h2>{{place.name}}</h2>
+      <h3>{{palce.items}}</h3>
       <p>
-        Rio do Sul, Santa Catarina <br />
-        Guilherme Gemballa, <br />
-        Jardim América Nº 260
+        {{ place.city }}, {{ place.state }}
+        <br />
+        {{ place.address }}
+        <br />
+        {{ place.address2 }}
       </p>
     </div>
-
-    <div class="card">
-      <img src="./public/assets/papersider.png" alt="Papersider" />
-      <h2>Papersider</h2>
-      <h3>Papéis e Papelão</h3>
-      <p>
-        Rio do Sul, Santa Catarina<br />
-        Guilherme Gemballa, Jardim América<br />
-        Nº 260
-      </p>
-    </div>
+    {% endfor %}
   </div>
 </main>
 {% endblock content %}
