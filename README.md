@@ -33,6 +33,35 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente.
 
+## 🚀 Como executar
+
+Clone o projeto e acesse a pasta do mesmo.
+
+```bash
+$ git clone https://github.com/Hugovarellaa/nlw-01-discovery
+$ cd nlw-01-discovery
+```
+
+Para iniciá-lo, siga os passos abaixo:
+
+```bash
+# Instalar as dependências
+$ yarn ou npm
+
+# Iniciar o projeto
+$ yarn start
+ou
+$ npm start
+
+# Inicia o banco de dados
+$ cd src/database/db.js
+$ tire o comentário da função db.serialize
+
+# Rode
+node src/database/db.js
+
+```
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](<https://www.figma.com/file/Byw4X5etg8VCmezueyhzkC/Ecoleta-(Starter)?node-id=136%3A546>). Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
@@ -49,7 +78,3 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
----
-
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)

@@ -5,20 +5,21 @@ const db = new sqlite3.Database("./src/database/database.db");
 module.exports = db;
 
 // db.serialize(() => {
-//   // Create db
-//   // db.run(`
-//   //     CREATE TABLE IF NOT EXISTS places (
-//   //       id INTEGER PRIMARY KEY AUTOINCREMENT,
-//   //       name TEXT NOT NULL,
-//   //       image TEXT NOT NULL,
-//   //       address TEXT NOT NULL,
-//   //       address2 TEXT NOT NULL,
-//   //       state TEXT NOT NULL,
-//   //       city TEXT NOT NULL,
-//   //       items TEXT NOT NULL
-//   //     );
-//   //   `);
+//  ------------- CRIAR O BANCO DE DADOS --------------
+//   db.run(`
+//       CREATE TABLE IF NOT EXISTS places (
+//         id INTEGER PRIMARY KEY AUTOINCREMENT,
+//         name TEXT NOT NULL,
+//         image TEXT NOT NULL,
+//         address TEXT NOT NULL,
+//         address2 TEXT NOT NULL,
+//         state TEXT NOT NULL,
+//         city TEXT NOT NULL,
+//         items TEXT NOT NULL
+//       );
+//     `);
 
+//  ------------- CADASTRA NA TABELA --------------
 //   const query = `
 //     INSERT INTO places (
 //       name, image, address, address2 ,state, city, items
@@ -27,7 +28,6 @@ module.exports = db;
 //       ?, ?, ?, ?, ?, ?, ?
 //     )
 //   `;
-
 //   const values = [
 //     "Papersider",
 //     "https://images.unsplash.com/photo-1517319725296-466c84bd7d54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -37,17 +37,15 @@ module.exports = db;
 //     "Rio do Sul",
 //     "Papéis e Papelão",
 //   ];
-
 //   function callback(err) {
 //     if (err) {
 //       return console.log(err);
 //     }
 //     console.log("Cadastrado com sucesso");
 //   }
-
-//   // Post db
 //   // db.run(query, values, callback);
 
+//  -------------  BUSCA NO BANCO DE DADOS --------------
 //   // Get db
 //   // db.all(
 //   //   `
@@ -61,7 +59,8 @@ module.exports = db;
 //   //   }
 //   // );
 
-//   // Delete registro em db
+//  -------------  DELETA DO BANCO DE DADOS --------------
+//                                       ----(Numero do ID)-----
 //   // db.run(`DELETE FROM places WHERE id = ?`, [3], function (err, results) {
 //   //   if (err) {
 //   //     return console.log(err);
