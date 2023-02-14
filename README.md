@@ -5,8 +5,9 @@
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Sugestão de plugin para vscode</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-sugestão-de-plugin-para-vscode">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -60,6 +61,24 @@ $ tire o comentário da função db.serialize
 # Rode
 node src/database/db.js
 
+```
+
+## 🔖 Sugestão de plugin para vscode
+
+- Nunjucks Template
+
+#### Configuração
+
+```
+ "files.associations": {
+  "\*.html": "njk"
+  },
+```
+
+```
+  "emmet.includeLanguages": {
+"njk": "html"
+},
 ```
 
 ## 🔖 Layout
